@@ -1,4 +1,3 @@
-import ExpandingCards from "./ExpandingCards";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 

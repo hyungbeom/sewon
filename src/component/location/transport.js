@@ -5,7 +5,6 @@ export default function Transport() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     // 주요 컬러 설정
-    const bgColor = '#EBF5A8';      // 전체 배경 연두색
     const titleColor = '#245943';   // 타이틀 짙은 초록색
     const darkText = '#111111';     // 정류장 이름 등 강조 텍스트
     const grayText = '#666666';     // 탑승/환승 등 설명 텍스트

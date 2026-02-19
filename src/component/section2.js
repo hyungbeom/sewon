@@ -1,4 +1,3 @@
-import ExpandingCards from "./ExpandingCards";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -12,11 +11,9 @@ export default function Section2() {
 
     // 시안에서 추출한 주요 컬러
     const titleColor = '#245943';      // 진한 초록색 (타이틀)
-    const yellowLineColor = '#F9C021'; // 노란색 짧은 구분선
     const activeMenuColor = '#689F38'; // 활성화된 메뉴 (진한 연두색)
     const inactiveMenuColor = '#9EBA98';// 비활성화된 메뉴 (연한 연두색)
     const buttonBgColor = '#122345';   // 자세히 보러가기 버튼 (네이비)
-    const addressBoxBgColor = '#FFFFFF'; // 주소 정보 박스 배경색
 
     return (
         <div style={{

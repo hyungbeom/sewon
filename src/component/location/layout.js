@@ -5,10 +5,7 @@ export default function Layout() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     // 시안에서 추출한 주요 컬러
-    const bgColor = '#EBF5A8';      // 전체 배경 (연한 연두/노랑)
     const titleColor = '#245943';   // 타이틀 (짙은 초록)
-    const addressBg = '#3F6452';    // 하단 주소 박스 배경 (짙은 초록)
-    const whiteText = '#FFFFFF';
 
     return (
         <div style={{

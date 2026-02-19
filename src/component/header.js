@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
 export default function Header({back = true}) {
-    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
 

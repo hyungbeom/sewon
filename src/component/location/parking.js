@@ -5,7 +5,6 @@ export default function Parking() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     // 시안에서 추출한 주요 컬러
-    const bgColor = '#EBF5A8';      // 전체 배경 (연두/노랑)
     const titleColor = '#245943';   // 상단 타이틀 짙은 초록색
     const badgeBgColor = '#3F6452'; // 주차장 이름 뱃지 배경색
     const qrBgColor = '#547A6A';    // 하단 QR 영역 배경색

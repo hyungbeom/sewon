@@ -5,7 +5,6 @@ export default function Stage() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     // 시안에서 추출한 주요 컬러
-    const outerBgColor = '#16284C'; // 바깥쪽 짙은 네이비
     const innerBgColor = '#1F3A68'; // 안쪽 카드 영역 네이비
     const yellowColor = '#F9C021';  // 포인트 쨍한 노란색
     const whiteText = '#FFFFFF';
