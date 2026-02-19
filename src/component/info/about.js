@@ -49,10 +49,10 @@ export default function About() {
                     boxSizing: 'border-box'
                 }}>
                     {/* 모바일일 때 글씨 줄바꿈 시안 반영 */}
-                    <div style={{ fontSize: isMobile ? 28 : 42, fontWeight: 800, marginBottom: 15, lineHeight: 1.3 }}>
+                    <div style={{ fontSize: isMobile ? 28 : 50, fontWeight: 800, marginBottom: 15, lineHeight: 1.3 }}>
                         한국후계농업경영인<br style={{ display: isMobile ? 'block' : 'none' }}/>이란?
                     </div>
-                    <div style={{ fontSize: isMobile ? 14 : 16, fontWeight: 400, opacity: 0.9, lineHeight: 1.6, wordBreak: 'keep-all' }}>
+                    <div style={{ fontSize: isMobile ? 14 : 24, fontWeight: 400, opacity: 0.9, lineHeight: 1.6, wordBreak: 'keep-all' }}>
                         대한민국 농업을 이끌어가는 농업인들의 권익 대변과 농업 발전을 목적으로 설립된 국내 최대의 농민 단체입니다.<br/>
                         주요 특징과 역할은 다음과 같습니다.
                     </div>
@@ -63,11 +63,12 @@ export default function About() {
                     display: 'grid',
                     gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', // 모바일 1열, PC 2열
                     gap: isMobile ? 30 : 40,
+                    alignItems: 'stretch',
                 }}>
 
                     {/* --- 카드 1 --- */}
-                    <div>
-                        <div style={{ fontSize: isMobile ? 22 : 26, fontWeight: 800, color: darkText, marginBottom: 20 }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                        <div style={{ fontSize: isMobile ? 22 : 40, fontWeight: 800, color: darkText, marginBottom: 20, flexShrink: 0 }}>
                             <span style={{ color: '#ccc', marginRight: 10 }}>1.</span> 정체성 및 구성원
                         </div>
                         <div style={{
@@ -75,7 +76,9 @@ export default function About() {
                             borderRadius: 16,
                             padding: isMobile ? '25px 20px' : '40px',
                             position: 'relative',
-                            overflow: 'hidden'
+                            overflow: 'hidden',
+                            flex: 1,
+                            minHeight: 0,
                         }}>
                             <BulletItem
                                 title="구성원:"
@@ -95,8 +98,8 @@ export default function About() {
                     </div>
 
                     {/* --- 카드 2 --- */}
-                    <div>
-                        <div style={{ fontSize: isMobile ? 22 : 26, fontWeight: 800, color: darkText, marginBottom: 20 }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                        <div style={{ fontSize: isMobile ? 22 : 40, fontWeight: 800, color: darkText, marginBottom: 20, flexShrink: 0 }}>
                             <span style={{ color: '#ccc', marginRight: 10 }}>2.</span> 설립 목적
                         </div>
                         <div style={{
@@ -105,7 +108,9 @@ export default function About() {
                             padding: isMobile ? '25px 20px' : '40px',
                             position: 'relative',
                             overflow: 'hidden',
-                            height: '100%', boxSizing: 'border-box'
+                            flex: 1,
+                            minHeight: 0,
+                            boxSizing: 'border-box'
                         }}>
                             <BulletItem
                                 title="농민 권익 보호:"
@@ -124,8 +129,8 @@ export default function About() {
                     </div>
 
                     {/* --- 카드 3 --- */}
-                    <div>
-                        <div style={{ fontSize: isMobile ? 22 : 26, fontWeight: 800, color: darkText, marginBottom: 20 }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                        <div style={{ fontSize: isMobile ? 22 : 40, fontWeight: 800, color: darkText, marginBottom: 20, flexShrink: 0 }}>
                             <span style={{ color: '#ccc', marginRight: 10 }}>3.</span> 주요 활동
                         </div>
                         <div style={{
@@ -133,7 +138,9 @@ export default function About() {
                             borderRadius: 16,
                             padding: isMobile ? '25px 20px' : '40px',
                             position: 'relative',
-                            overflow: 'hidden'
+                            overflow: 'hidden',
+                            flex: 1,
+                            minHeight: 0,
                         }}>
                             <BulletItem
                                 title="농권 운동 및 정책 활동:"
@@ -152,8 +159,8 @@ export default function About() {
                     </div>
 
                     {/* --- 카드 4 --- */}
-                    <div>
-                        <div style={{ fontSize: isMobile ? 22 : 26, fontWeight: 800, color: darkText, marginBottom: 20 }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+                        <div style={{ fontSize: isMobile ? 22 : 40, fontWeight: 800, color: darkText, marginBottom: 20, flexShrink: 0 }}>
                             <span style={{ color: '#ccc', marginRight: 10 }}>4.</span> 사회적 위상
                         </div>
                         <div style={{
@@ -162,7 +169,9 @@ export default function About() {
                             padding: isMobile ? '25px 20px' : '40px',
                             position: 'relative',
                             overflow: 'hidden',
-                            height: '100%', boxSizing: 'border-box',
+                            flex: 1,
+                            minHeight: 0,
+                            boxSizing: 'border-box',
                             display: 'flex', alignItems: 'center' // 텍스트 중앙 정렬
                         }}>
                             <div style={{ fontSize: isMobile ? 15 : 16, fontWeight: 800, color: darkText, lineHeight: 1.6, wordBreak: 'keep-all', zIndex: 1 }}>

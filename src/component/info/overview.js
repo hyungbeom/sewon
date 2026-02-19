@@ -5,7 +5,7 @@ export default function Overview() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     // 시안에서 추출한 주요 컬러
-    const titleColor = '#72B043'; // 쨍한 연두/초록색
+    const titleColor = 'rgba(111, 186, 44, 1)'; // 쨍한 연두/초록색
     const darkText = '#111111';   // 짙은 검정 (라벨용)
     const grayText = '#777777';   // 회색 (설명용)
 
@@ -23,7 +23,7 @@ export default function Overview() {
             {/* 메인 컨테이너 (최대 너비 고정) */}
             <div style={{
                 width: '100%',
-                maxWidth: 1100,
+                maxWidth: 1200,
                 display: 'flex',
                 // ★ 핵심: 모바일은 세로(column), PC는 가로(row) 배치
                 flexDirection: isMobile ? 'column' : 'row',
@@ -35,7 +35,7 @@ export default function Overview() {
                     [왼쪽/상단] 포스터 이미지 영역
                 ========================================== */}
                 <div style={{
-                    width: isMobile ? '100%' : '45%', // PC에서는 전체 너비의 45% 차지
+                    width: isMobile ? '100%' : '42%', // PC에서는 전체 너비의 38% 차지 (오른쪽 텍스트 영역이 더 넓게)
                     flexShrink: 0
                 }}>
                     <img
@@ -62,7 +62,7 @@ export default function Overview() {
 
                     {/* 1. 타이틀 (모바일/PC 줄바꿈 다르게 적용) */}
                     <div style={{
-                        fontSize: isMobile ? 32 : 38,
+                        fontSize: isMobile ? 32 : 40,
                         fontWeight: 900,
                         color: titleColor,
                         lineHeight: 1.2,
@@ -84,7 +84,7 @@ export default function Overview() {
 
                     {/* 2. 서브타이틀 및 구분선 */}
                     <div style={{
-                        fontSize: isMobile ? 18 : 22,
+                        fontSize: isMobile ? 28 : 32,
                         color: grayText,
                         fontWeight: 500,
                         marginBottom: isMobile ? 30 : 40,
@@ -99,21 +99,21 @@ export default function Overview() {
 
                         {/* 3-1. 행사기간 */}
                         <div style={{ display: 'flex', gap: 20 }}>
-                            <div style={{ width: 70, fontSize: 16, fontWeight: 800, color: darkText, flexShrink: 0 }}>행사기간</div>
-                            <div style={{ fontSize: 16, color: grayText }}>2026.03.31(화) ~ 04.02.(목)</div>
+                            <div style={{ width: 70, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0 }}>행사기간</div>
+                            <div style={{ fontSize: 20, color: grayText }}>2026.03.31(화) ~ 04.02.(목)</div>
                         </div>
 
                         {/* 3-2. 장소 */}
                         <div style={{ display: 'flex', gap: 20 }}>
-                            <div style={{ width: 70, fontSize: 16, fontWeight: 800, color: darkText, flexShrink: 0 }}>장소</div>
-                            <div style={{ fontSize: 16, color: grayText }}>제주특별자치도 제주시 새별오름 일원</div>
+                            <div style={{ width: 70, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0 }}>장소</div>
+                            <div style={{ fontSize: 20, color: grayText }}>제주특별자치도 제주시 새별오름 일원</div>
                         </div>
 
                         {/* 3-3. 목적 (문단 분리) */}
                         <div style={{ display: 'flex', gap: 20 }}>
-                            <div style={{ width: 70, fontSize: 16, fontWeight: 800, color: darkText, flexShrink: 0 }}>목적</div>
-                            <div style={{ flex: 1, fontSize: 16, color: grayText, lineHeight: 1.6, wordBreak: 'keep-all' }}>
-                                <div style={{ marginBottom: 12 }}>
+                            <div style={{ width: 70, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0, paddingTop: 2 }}>목적</div>
+                            <div style={{ flex: 1, fontSize: 20, color: grayText, lineHeight: 1.6, wordBreak: 'keep-all' }}>
+                                <div style={{ marginBottom: 12, fontSize: 20 }}>
                                     한국후계농업경영인 회원 및 가족들의 결속과 단합으로 농업농촌 발전 주도
                                 </div>
                                 <div style={{ marginBottom: 12 }}>
