@@ -7,7 +7,6 @@ export default function Section3() {
 
     // 디자인 컬러
     const titleColor = '#254A5E';
-    const highlightColor = '#F39C12';
     const textColor = '#FFFFFF';
     const yellowColor = '#FFE822';
 
@@ -67,7 +66,7 @@ export default function Section3() {
                             프로그램<br />
                             <span style={{ fontWeight: 300 }}>안내</span>
                         </div>
-                        <div style={{ width: 40, height: 3, backgroundColor: highlightColor, margin: '20px 0 30px 0' }} />
+                        <div style={{ width: 60, height: 2, background: 'linear-gradient(90deg, rgba(243, 152, 0, 1) 26%, rgba(244, 161, 10, 1) 45%, rgba(248, 186, 37, 1) 76%, rgba(253, 210, 63, 1) 100%)', marginTop: 84, marginBottom: 84 }} />
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                             {isMobile ? [] : ['개막식', '무대 프로그램'].map((tab) => (
@@ -133,9 +132,9 @@ export default function Section3() {
                                     gap: 20,
                                 }}>
                                     {[
-                                        { title: '난타', img: '/info9.png' },
-                                        { title: '제주 농요', img: '/info10.png' },
-                                        { title: '팝페라', img: '/info11.png' }
+                                        { title: '제주농요', img: '/info9.png' },
+                                        { title: '개막식', img: '/info10.png' },
+                                        { title: '레이저쇼', img: '/info11.png' }
                                     ].map((card, idx) => (
                                         <div key={idx} style={{
                                             backgroundColor: 'white',
@@ -162,16 +161,7 @@ export default function Section3() {
                                     ))}
                                 </div>
 
-                                {!isMobile && (
-                                    <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 15, marginTop: 30 }}>
-                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ cursor: 'pointer', opacity: 0.7 }}>
-                                            <polyline points="15 18 9 12 15 6"></polyline>
-                                        </svg>
-                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ cursor: 'pointer' }}>
-                                            <polyline points="9 18 15 12 9 6"></polyline>
-                                        </svg>
-                                    </div>
-                                )}
+
                             </div>
                         )}
 
