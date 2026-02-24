@@ -65,3 +65,17 @@ code {
  html.is-scrolling ::-webkit-scrollbar-thumb {
    background-color: rgba(0, 0, 0, 0.4) !important;
  }
+
+/* section2 오시는 길 - 메뉴 전환 시 지도 페이드 인 */
+@keyframes section2MapFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section2-map-enter {
+  animation: section2MapFadeIn 0.35s ease-out forwards;
+}

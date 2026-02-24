@@ -90,40 +90,67 @@ export default function Side() {
                     display: 'flex',
                     flexDirection: isMobile ? 'column' : 'row',
                     justifyContent: 'space-between',
-                    alignItems: isMobile ? 'flex-start' : 'flex-end',
+                    alignItems: isMobile ? 'flex-start' : 'center',
                     marginBottom: isMobile ? 30 : 40,
                     gap: isMobile ? 20 : 0
                 }}>
-                    <div style={{ fontSize: isMobile ? 26 : 32, fontWeight: 900, color: titleColor }}>
+                    <div style={{ fontSize: isMobile ? 26 : 32, fontWeight: 900, color: titleColor, flexShrink: 0 }}>
                         부대 프로그램
                     </div>
 
                     <div className="hide-scrollbar" style={{
                         display: 'flex',
-                        gap: isMobile ? 15 : 20,
+                        gap: isMobile ? 15 : 16,
                         width: isMobile ? '100%' : 'auto',
                         overflowX: isMobile ? 'auto' : 'visible',
                         whiteSpace: 'nowrap',
-                        paddingBottom: isMobile ? 5 : 0
+                        paddingBottom: isMobile ? 5 : 0,
+                        flexShrink: 0
                     }}>
-                        {tabs.map((tab) => (
-                            <div
-                                key={tab}
-                                onClick={() => setActiveTab(tab)}
-                                style={{
-                                    fontSize: isMobile ? 14 : 15,
-                                    fontWeight: activeTab === tab ? 800 : 500,
-                                    color: activeTab === tab ? darkText : '#999',
-                                    cursor: 'pointer',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: 6
-                                }}
-                            >
-                                {activeTab === tab && <span style={{ fontSize: 20, lineHeight: 0 }}>·</span>}
-                                {tab}
-                            </div>
-                        ))}
+                        {tabs.map((tab) => {
+                            const isActive = activeTab === tab;
+                            if (isMobile) {
+                                return (
+                                    <div
+                                        key={tab}
+                                        onClick={() => setActiveTab(tab)}
+                                        style={{
+                                            fontSize: 14,
+                                            fontWeight: isActive ? 800 : 500,
+                                            color: isActive ? darkText : '#999',
+                                            cursor: 'pointer',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: 6
+                                        }}
+                                    >
+                                        {isActive && <span style={{ fontSize: 20, lineHeight: 0 }}>·</span>}
+                                        {tab}
+                                    </div>
+                                );
+                            }
+                            // PC: 활성 = 검정 알약 배경 + 흰 글씨, 비활성 = 연한 회색 글씨만
+                            return (
+                                <div
+                                    key={tab}
+                                    onClick={() => setActiveTab(tab)}
+                                    style={{
+                                        fontSize: 15,
+                                        fontWeight: isActive ? 600 : 400,
+                                        color: isActive ? '#FFFFFF' : '#999999',
+                                        backgroundColor: isActive ? '#000000' : 'transparent',
+                                        padding: '10px 20px',
+                                        borderRadius: 9999,
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center'
+                                    }}
+                                >
+                                    {tab}
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
 

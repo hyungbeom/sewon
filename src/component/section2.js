@@ -117,7 +117,7 @@ export default function Section2() {
                             </div>
                         </div>
 
-                        {/* [오른쪽 영역] 지도 이미지 및 주소 정보 */}
+                        {/* [오른쪽 영역] 지도 이미지 및 주소 정보 (전환 시 페이드 인 애니메이션) */}
                         <div style={{
                             flex: 1,
                             display: 'flex',
@@ -125,14 +125,15 @@ export default function Section2() {
                             alignItems: 'center',
                             marginRight: -80
                         }}>
-                            {activeMenu === '행사장 위치' ? (
-                                <img src="/map.png" style={{width: 'calc(100% + 80px)', display: 'block'}}
-                                     alt="행사장 위치 지도"/>
-                            ) : (
-                                <img src="/map3.png" style={{width: 'calc(100% + 80px)', display: 'block'}}
-                                     alt="행사장 세부 위치 약도"/>
-                            )}
-
+                            <div key={activeMenu} className="section2-map-enter" style={{ width: '100%' }}>
+                                {activeMenu === '행사장 위치' ? (
+                                    <img src="/map.png" style={{width: 'calc(100% + 80px)', display: 'block'}}
+                                         alt="행사장 위치 지도"/>
+                                ) : (
+                                    <img src="/map3.png" style={{width: 'calc(100% + 80px)', display: 'block'}}
+                                         alt="행사장 세부 위치 약도"/>
+                                )}
+                            </div>
                         </div>
 
                     </div>

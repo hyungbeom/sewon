@@ -98,29 +98,41 @@ export default function Header({back = true}) {
                     <div
                         style={{
                             flex: 1,
-                            textAlign: 'center',
                             display: 'flex',
-                            justifyContent: 'space-around',
+                            justifyContent: 'center',
                             alignItems: 'center',
-                            fontSize: 18,
-                            fontWeight: 500,
-                            cursor: 'pointer'
+                            minWidth: 0
                         }}
                         onMouseEnter={() => setIsMenuOpen(true)}
                     >
-                        {menuData.map((menu, index) => (
-                            <div
-                                key={index}
-                                style={{
-                                    width: 180,
-                                    color: activeIndex === index ? '#F2C94C' : 'white',
-                                    transition: 'color 0.2s'
-                                }}
-                                onMouseEnter={() => setActiveIndex(index)}
-                            >
-                                {menu.title}
-                            </div>
-                        ))}
+                        <div
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                gap: 48,
+                                fontSize: 18,
+                                fontWeight: 500,
+                                cursor: 'pointer',
+                                width: '100%',
+                                maxWidth: 720
+                            }}
+                        >
+                            {menuData.map((menu, index) => (
+                                <div
+                                    key={index}
+                                    style={{
+                                        flex: 1,
+                                        textAlign: 'center',
+                                        color: activeIndex === index ? '#F2C94C' : 'white',
+                                        transition: 'color 0.2s'
+                                    }}
+                                    onMouseEnter={() => setActiveIndex(index)}
+                                >
+                                    {menu.title}
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     <div style={{ flex: 1, textAlign: 'right', paddingRight: 40 }}>
