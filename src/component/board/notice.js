@@ -165,7 +165,7 @@ export default function Notice() {
                 }}>
                     <span style={{ color: totalColor }}>Total</span>
                     <span style={{ color: grayText, margin: '0 8px' }}>·</span>
-                    <span style={{ color: grayText, fontWeight: 500 }}>16</span>
+                    <span style={{ color: grayText, fontWeight: 500 }}>0</span>
                 </div>
 
                 {/* 2. 게시판 목록 영역 */}
