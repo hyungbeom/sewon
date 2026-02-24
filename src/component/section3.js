@@ -134,7 +134,7 @@ export default function Section3() {
                                 <div style={{
                                     display: 'grid',
                                     gridTemplateColumns: 'repeat(3, 1fr)',
-                                    gap: 20,
+                                    gap: isMobile ? 16 : 20,
                                 }}>
                                     {[
                                         { title: '제주농요', img: '/info9.png' },
