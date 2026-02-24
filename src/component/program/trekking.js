@@ -25,7 +25,7 @@ export default function Trekking() {
             display: 'flex',
             justifyContent: 'center',
             padding: isMobile ? '40px 0px 80px' : '80px 0px 120px',
-            fontFamily: "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
+
             letterSpacing: '-0.5px'
         }}>
 

@@ -8,7 +8,7 @@ export default function Stage() {
     const innerBgColor = '#1F3A68'; // 안쪽 카드 영역 네이비
     const yellowColor = '#F9C021';  // 포인트 쨍한 노란색
     const whiteText = '#FFFFFF';
-
+    const textColor = '#FFFFFF';
     // 가수 데이터 (실제 이미지 경로로 수정해 주세요)
     const day1Artists = [
         { name: '손빈아', img: '/singer/singer1.png' },   // 손빈아 사진 경로
@@ -29,7 +29,7 @@ export default function Stage() {
             display: 'flex',
             justifyContent: 'center',
             padding: isMobile ? '40px 0px 80px' : '80px 0px 120px',
-            fontFamily: "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
+
             letterSpacing: '-0.5px',
             boxSizing: 'border-box'
         }}>
@@ -50,135 +50,86 @@ export default function Stage() {
                 ========================================== */}
                 <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: isMobile ? 40 : 60 }}>
 
-                    {/* ★ PC 버전 전용: 세로 타임라인 선 (노란 마커 중앙을 관통) */}
+                    {/* 타임라인 세로선 */}
                     {!isMobile && (
                         <div style={{
                             position: 'absolute',
-                            left: 77,
-                            top: 15,
-                            bottom: 50,
-                            width: 2,
-                            backgroundColor: 'rgba(255,255,255,1)'
+                            left: '134px',
+                            top: '20px',
+                            bottom: '0',
+                            width: '2px',
+                            backgroundColor: 'rgba(255,255,255,0.3)',
+                            zIndex: 1
                         }} />
                     )}
 
-                    {/* --- [1일차] --- */}
-                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 20 : 40, position: 'relative' }}>
 
-                        {/* 1일차 라벨: 제목 + 노란 원형 마커 + 시간 (이미지 시안 타임라인) */}
-                        <div style={{
-                            width: isMobile ? '100%' : 90,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: isMobile ? 'flex-start' : 'flex-start',
-                            gap: 8,
-                            flexShrink: 0
-                        }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                                <span style={{ fontSize: 24, fontWeight: 900, color: yellowColor }}>1일차</span>
-                                {!isMobile ? (
-                                    <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: yellowColor, flexShrink: 0, zIndex: 1 }} />
-                                ) : (
-                                    <div style={{ flex: 1, height: 1, backgroundColor: 'rgba(255,255,255,0.2)' }} />
-                                )}
+                    {/* --- 1일차 라인 --- */}
+                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 15 : 30, position: 'relative', zIndex: 2 }}>
+                        <div style={{ width: isMobile ? 'auto' : 150, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8, flexShrink: 0 }}>
+                            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: isMobile ? 'flex-start' : 'space-between', gap: 10, width: '100%' }}>
+                                <div style={{ fontSize: 40, fontWeight: 800, color: yellowColor }}>1일차</div>
+                                {!isMobile && <div style={{ width: 9, height: 9, borderRadius: '50%', border: `11px solid ${yellowColor}`, backgroundColor: '#8BC34A', marginTop: 8, flexShrink: 0 }} />}
                             </div>
-                            <>
-                                <div style={{ fontSize: 14, fontWeight: 400, color: whiteText }}>20:00~</div>
-                                <div style={{ fontSize: 14, fontWeight: 400, color: whiteText }}>22:00</div>
-                            </>
+                            <div style={{ color: textColor, fontSize: 21, fontWeight: 600, lineHeight: 1.4 }}>
+                                <div>20:00~</div>
+                                <div>22:00</div>
+                            </div>
                         </div>
-
-                        {/* 1일차 카드 그리드 */}
-                        <div style={{
-                            flex: 1,
-                            width: isMobile ? '100%' : 850,
-                            display: 'grid',
-                            // PC는 4칸, 모바일은 2칸 고정
-                            gridTemplateColumns: isMobile ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))',
-                            gap: isMobile ? 15 : 20
-                        }}>
+                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))', gap: isMobile ? 15 : 20 }}>
+                            {/* ★ day1Artists 매핑 */}
                             {day1Artists.map((artist, idx) => (
                                 <div key={idx} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
                                     <div style={{
                                         width: '100%',
-                                        aspectRatio: '3/4', // 3:4 세로형 비율 고정
+                                        aspectRatio: '3/4',
                                         borderRadius: '16px',
-                                        backgroundImage: `url(${artist.img})`,
+                                        backgroundImage: `url(${artist.img})`, // 개별 이미지
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
 
+                                        boxShadow: '0 8px 16px rgba(0,0,0,0.1)'
                                     }} />
-                                    <div style={{ color: whiteText, fontSize: 16, fontWeight: 600 }}>{artist.name}</div>
+                                    <div style={{ color: textColor, fontSize: 25, fontWeight: 400 }}>{artist.name}</div>
                                 </div>
                             ))}
                         </div>
                     </div>
 
                     {/* --- [2일차] --- */}
-                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 20 : 40, position: 'relative' }}>
 
-                        {/* 2일차 라벨: 제목 + 노란 원형 마커 + 시간 (이미지 시안 타임라인) */}
-                        <div style={{
-                            width: isMobile ? '100%' : 90,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: isMobile ? 'flex-start' : 'flex-start',
-                            gap: 8,
-                            flexShrink: 0
-                        }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                                <span style={{ fontSize: 24, fontWeight: 900, color: yellowColor }}>2일차</span>
-                                {!isMobile ? (
-                                    <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: yellowColor, flexShrink: 0, zIndex: 1 }} />
-                                ) : (
-                                    <div style={{ flex: 1, height: 1, backgroundColor: 'rgba(255,255,255,0.2)' }} />
-                                )}
+                    {/* --- 2일차 라인 --- */}
+                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 15 : 30, position: 'relative', zIndex: 2, marginTop : 100 }}>
+                        <div style={{ width: isMobile ? 'auto' : 150, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8, flexShrink: 0 }}>
+                            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: isMobile ? 'flex-start' : 'space-between', gap: 10, width: '100%' }}>
+                                <div style={{ fontSize: 40, fontWeight: 800, color: yellowColor }}>2일차</div>
+                                {!isMobile && <div style={{ width: 9, height: 9, borderRadius: '50%', border: `11px solid ${yellowColor}`, backgroundColor: '#8BC34A', marginTop: 8, flexShrink: 0 }} />}
                             </div>
-                            <>
-                                <div style={{ fontSize: 14, fontWeight: 400, color: whiteText }}>13:00~</div>
-                                <div style={{ fontSize: 14, fontWeight: 400, color: whiteText }}>17:00</div>
-                            </>
+                            <div style={{ color: textColor, fontSize: 24, fontWeight: 600, lineHeight: 1.4 }}>
+                                <div>13:00~</div>
+                                <div>17:00</div>
+                            </div>
                         </div>
+                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))', gap: isMobile ? 15 : 20 }}>
+                            {/* ★ day2Artists 매핑 */}
+                            {day2Artists.map((artist, idx) => (
+                                <div key={idx} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
+                                    <div style={{
+                                        width: '100%',
+                                        aspectRatio: '3/4',
+                                        borderRadius: '16px',
+                                        backgroundImage: `url(${artist.img})`, // 개별 이미지
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
 
-                        {/* 2일차 카드 그리드 */}
-                        <div style={{
-                            flex: 1,
-                            width: isMobile ? '100%' : 850,
-                            display: 'grid',
-                            // PC는 4칸, 모바일은 2칸 고정
-                            gridTemplateColumns: isMobile ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))',
-                            gap: isMobile ? 15 : 20
-                        }}>
-                            {day2Artists.map((artist, idx) => {
-                                // ★ 핵심 디테일: 모바일이면서 첫 번째 카드('천록담')일 때만 가로로 넓게 2칸을 차지합니다!
-                                const isWideMobileCard = isMobile && idx === 0;
-
-                                return (
-                                    <div key={idx} style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        alignItems: 'center',
-                                        gap: 12,
-                                        // 모바일 첫 카드는 1열부터 끝(2칸)까지 병합
-                                        gridColumn: isWideMobileCard ? '1 / span 2' : 'auto'
-                                    }}>
-                                        <div style={{
-                                            width: '100%',
-                                            // 가로형일 땐 2:1 와이드 비율, 세로형일 땐 3:4 인물 비율
-                                            aspectRatio: isWideMobileCard ? '2/1' : '3/4',
-                                            borderRadius: '16px',
-                                            backgroundImage: `url(${artist.img})`,
-                                            backgroundSize: 'cover',
-                                            // 가로로 넓어질 때는 상단이 덜 잘리도록 포지션 조정
-                                            backgroundPosition: isWideMobileCard ? 'center top' : 'center',
-
-                                        }} />
-                                        <div style={{ color: whiteText, fontSize: 16, fontWeight: 600 }}>{artist.name}</div>
-                                    </div>
-                                );
-                            })}
+                                        boxShadow: '0 8px 16px rgba(0,0,0,0.1)'
+                                    }} />
+                                    <div style={{ color: textColor, fontSize: 25, fontWeight: 400 }}>{artist.name}</div>
+                                </div>
+                            ))}
                         </div>
                     </div>
+
 
                 </div>
             </div>

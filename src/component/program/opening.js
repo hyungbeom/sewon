@@ -40,7 +40,7 @@ export default function Opening() {
             {/* ★ 핵심 수정: PC는 전체를 회색으로 감싸고, 모바일은 투명하게 풀어줍니다. */}
             <div style={{
                 width: '100%',
-                maxWidth: 1200,
+                maxWidth: 1400,
                 backgroundColor: isMobile ? 'transparent' : grayBg, // PC일 때만 전체 회색 배경
                 borderRadius: isMobile ? 0 : '24px',
                 padding: isMobile ? 0 : '60px 80px',

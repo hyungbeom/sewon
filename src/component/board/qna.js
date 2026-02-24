@@ -13,7 +13,7 @@ export default function Qna() {
                 display: "flex",
                 justifyContent: "center",
                 padding: isMobile ? "40px 20px 80px" : "80px 20px 120px",
-                fontFamily: "'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
+
                 letterSpacing: "-0.5px",
                 boxSizing: "border-box",
             }}

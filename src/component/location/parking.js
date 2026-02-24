@@ -17,7 +17,6 @@ export default function Parking() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            fontFamily: "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
             letterSpacing: '-0.5px',
             boxSizing: 'border-box'
         }}>

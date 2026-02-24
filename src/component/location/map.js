@@ -18,7 +18,7 @@ export default function Map() {
             flexDirection: 'column',
             alignItems: 'center',
             padding: isMobile ? '40px 0px 80px' : '80px 0px 100px',
-            fontFamily: "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
+
             letterSpacing: '-0.5px',
             boxSizing: 'border-box',
             borderRadius: '24px',
