@@ -98,22 +98,22 @@ export default function Overview() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
 
                         {/* 3-1. 행사기간 */}
-                        <div style={{ display: 'flex', gap: 20 }}>
-                            <div style={{ width: 100, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0, paddingTop : 8 }}>행사기간</div>
-                            <div style={{ fontSize: 20, color: grayText }}>2026.03.31(화) ~ 04.02.(목)</div>
+                        <div style={{ display: 'flex', gap: 20 , fontSize: isMobile ? 14 : 20}}>
+                            <div style={{ width: 100, fontWeight: 800, color: darkText, flexShrink: 0, paddingTop : 8 }}>행사기간</div>
+                            <div style={{ color: grayText }}>2026.03.31(화) ~ 04.02.(목)</div>
                         </div>
 
                         {/* 3-2. 장소 */}
-                        <div style={{ display: 'flex', gap: 20 }}>
-                            <div style={{ width: 100, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0 , paddingTop : 8}}>장소</div>
-                            <div style={{ fontSize: 20, color: grayText }}>제주특별자치도 제주시 새별오름 일원</div>
+                        <div style={{ display: 'flex', gap: 20 ,  fontSize: isMobile ? 14 : 20}}>
+                            <div style={{ width: 100,  fontWeight: 800, color: darkText, flexShrink: 0 , paddingTop : 8}}>장소</div>
+                            <div style={{ color: grayText }}>제주특별자치도 제주시 새별오름 일원</div>
                         </div>
 
                         {/* 3-3. 목적 (문단 분리) */}
                         <div style={{ display: 'flex', gap: 20 }}>
-                            <div style={{ width: 100, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0, paddingTop : 8 }}>목적</div>
+                            <div style={{ width: 100,  fontSize: isMobile ? 14 : 20, fontWeight: 800, color: darkText, flexShrink: 0, paddingTop : 8 }}>목적</div>
                             <div style={{ flex: 1, fontSize: 20, color: grayText,  wordBreak: 'keep-all' }}>
-                                <div style={{ marginBottom: 12, fontSize: 20 }}>
+                                <div style={{ marginBottom: 12 }}>
                                     한국후계농업경영인 회원 및 가족들의 결속과 단합으로 농업농촌 발전 주도
                                 </div>
                                 <div style={{ marginBottom: 12 }}>
