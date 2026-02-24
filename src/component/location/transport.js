@@ -231,7 +231,7 @@ export default function Transport() {
 
                 {/* 5. 하단 경고 문구 */}
                 <div style={{ textAlign: 'center', fontSize: isMobile ? 13 : 15, color: grayText, lineHeight: 1.6 }}>
-                    제주 버스는 배차 간격이 길 수 있으므로, 출발 전 <span style={{ fontWeight: 800, color: darkText }}>&lt;카카오버스 / 네이버지도 앱&gt;</span>으로<br style={{ display: isMobile ? 'block' : 'none' }} /> 실시간 도착 정보를 확인하시기 바랍니다.
+                    제주 버스는 배차 간격이 길 수 있으므로,  {isMobile ? <br/> : <></>} 출발 전 <span style={{ fontWeight: 800, color: darkText }}>&lt;카카오버스 / 네이버지도 앱&gt;</span>으로<br style={{ display: isMobile ? 'block' : 'none' }} /> 실시간 도착 정보를 확인하시기 바랍니다.
                 </div>
 
             </div>
