@@ -8,7 +8,7 @@ export default function Section4() {
 
     // 현재 선택된 탭 상태 관리 (기본값: 공지사항)
     const [activeTab, setActiveTab] = useState('공지사항');
-    const tabs = ['공지사항', '자주하는 질문', 'Q&A'];
+    const tabs = ['공지사항', '자주하는 질문'];
 
     // 각 탭별로 보여줄 데이터
     const boardData = {
@@ -69,7 +69,7 @@ export default function Section4() {
                                 >
                                     {tab}
                                 </span>
-                                {idx < tabs.length - 1 && <span style={{ color: '#ccc' }}>·</span>}
+
                             </div>
                         ))}
                     </div>

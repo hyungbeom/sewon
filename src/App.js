@@ -18,6 +18,7 @@ import Layouts from "./component/Layouts";
 import Qna from "./component/board/qna";
 import Faq from "./component/board/faq";
 import Notice from "./component/board/notice";
+import {useEffect} from "react";
 
 
 // ★ 라우터 설계도 (헤더 메뉴의 path와 1:1 완벽 매칭)
@@ -117,5 +118,33 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
+
+
+    useEffect(() => {
+        let scrollTimeout;
+
+        const handleScroll = () => {
+            // 1. 스크롤 발생 시 클래스 추가
+            document.documentElement.classList.add('is-scrolling');
+
+            // 2. 기존 타이머 취소
+            clearTimeout(scrollTimeout);
+
+            // 3. 스크롤 멈추고 0.8초 뒤 클래스 제거
+            scrollTimeout = setTimeout(() => {
+                document.documentElement.classList.remove('is-scrolling');
+            }, 800);
+        };
+
+        // 컴포넌트가 마운트될 때 이벤트 리스너 등록
+        window.addEventListener('scroll', handleScroll);
+
+        // 컴포넌트가 언마운트될 때 이벤트 리스너와 타이머 정리 (메모리 누수 방지)
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            clearTimeout(scrollTimeout);
+        };
+    }, []); // 빈 배열: 처음 렌더링될 때 딱 한 번만 실행
+
     return <RouterProvider router={router} />;
 }

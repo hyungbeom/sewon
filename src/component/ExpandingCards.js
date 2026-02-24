@@ -20,7 +20,7 @@ export default function ExpandingCards() {
         <div style={{
             display: isMobile ? 'grid' : 'flex',
             gridTemplateColumns: isMobile ? '1fr 1fr' : 'none', // 모바일에서 2칸씩 나눔
-            gap: isMobile ? '12px' : '16px',
+            gap: 16,
             height: isMobile ? 'auto' : '400px',
             width: '100%',
             margin: '0 auto',
