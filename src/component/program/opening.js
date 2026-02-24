@@ -13,7 +13,7 @@ export default function Opening() {
     // 행사 정보 데이터
     const infoData = [
         { label: '기간', value: '2026. 03. 31. 화요일' },
-        { label: '시간', value: '18:00 - 19:00' },
+        { label: '시간', value: '18:00 - 20:00' },
         { label: '장소', value: '제주시 새별오름 일원' },
         { label: '주요내용', value: '제20회 한국후계농업경영인 전국대회의 시작을 알리는 공식 행사로, 식전공연을\n시작으로 개회 선언, 환영 인사 및 개막 퍼포먼스가 진행됩니다.' },
         { label: '주최·주관', value: '(사)한국후계농업경영인중앙연합회' }

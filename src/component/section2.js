@@ -84,6 +84,7 @@ export default function Section2() {
                                         onClick={() => setActiveMenu('행사장 세부 위치')}
                                         style={{color: activeMenu === '행사장 세부 위치' ? activeMenuColor : inactiveMenuColor}}
                                     >
+                                        \
                                         행사장 세부 위치
                                     </div>
                                 </div>
