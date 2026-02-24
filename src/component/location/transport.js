@@ -166,7 +166,8 @@ export default function Transport() {
                 ========================================== */}
                 <div>
                     <div style={{ fontSize: isMobile ? 24 : 30, fontWeight: 900, color: titleColor, marginBottom: 20, display: 'flex', alignItems: 'center', gap: 10 }}>
-                        <span style={{ fontSize: isMobile ? 28 : 34 }}>🚢</span> 제주항 <span style={{ fontSize: isMobile ? 18 : 22, fontWeight: 600 }}>(국제여객터미널)</span> ➔ 새별오름
+                        <span style={{ fontSize: isMobile ? 28 : 34 }}>🚢</span> 제주항 {isMobile ? <span
+                        style={{fontSize: 22, fontWeight: 600}}>(국제여객터미널)</span> : <></>} ➔ 새별오름
                     </div>
 
                     <div style={{
