@@ -66,15 +66,25 @@ export default function Stage() {
 
                     {/* --- 1일차 라인 --- */}
                     <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 15 : 30, position: 'relative', zIndex: 2 }}>
-                        <div style={{ width: isMobile ? 'auto' : 150, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8, flexShrink: 0 }}>
-                            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: isMobile ? 'flex-start' : 'space-between', gap: 10, width: '100%' }}>
-                                <div style={{ fontSize: 40, fontWeight: 800, color: yellowColor }}>1일차</div>
-                                {!isMobile && <div style={{ width: 9, height: 9, borderRadius: '50%', border: `11px solid ${yellowColor}`, backgroundColor: '#8BC34A', marginTop: 8, flexShrink: 0 }} />}
-                            </div>
-                            <div style={{ color: textColor, fontSize: 21, fontWeight: 600, lineHeight: 1.4 }}>
-                                <div>20:00~</div>
-                                <div>22:00</div>
-                            </div>
+                        <div style={{ width: isMobile ? '100%' : 150, display: 'flex', flexDirection: isMobile ? 'row' : 'column', alignItems: isMobile ? 'center' : 'flex-start', gap: isMobile ? 12 : 8, flexShrink: 0 }}>
+                            {isMobile ? (
+                                <>
+                                    <div style={{ fontSize: 24, fontWeight: 800, color: yellowColor }}>1일차</div>
+                                    <div style={{ color: textColor, fontSize: 16, fontWeight: 600 }}>20:00~22:00</div>
+                                    <div style={{ flex: 1, minWidth: 20, height: 1, backgroundColor: 'rgba(255,255,255,0.5)' }} />
+                                </>
+                            ) : (
+                                <>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 10, width: '100%' }}>
+                                        <div style={{ fontSize: 40, fontWeight: 800, color: yellowColor }}>1일차</div>
+                                        <div style={{ width: 9, height: 9, borderRadius: '50%', border: `11px solid ${yellowColor}`, backgroundColor: '#8BC34A', marginTop: 8, flexShrink: 0 }} />
+                                    </div>
+                                    <div style={{ color: textColor, fontSize: 21, fontWeight: 600, lineHeight: 1.4 }}>
+                                        <div>20:00~</div>
+                                        <div>22:00</div>
+                                    </div>
+                                </>
+                            )}
                         </div>
                         <div style={{ flex: 1, display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))', gap: isMobile ? 15 : 20 }}>
                             {/* ★ day1Artists 매핑 */}
@@ -99,16 +109,26 @@ export default function Stage() {
                     {/* --- [2일차] --- */}
 
                     {/* --- 2일차 라인 --- */}
-                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 15 : 30, position: 'relative', zIndex: 2, marginTop : 100 }}>
-                        <div style={{ width: isMobile ? 'auto' : 150, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8, flexShrink: 0 }}>
-                            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: isMobile ? 'flex-start' : 'space-between', gap: 10, width: '100%' }}>
-                                <div style={{ fontSize: 40, fontWeight: 800, color: yellowColor }}>2일차</div>
-                                {!isMobile && <div style={{ width: 9, height: 9, borderRadius: '50%', border: `11px solid ${yellowColor}`, backgroundColor: '#8BC34A', marginTop: 8, flexShrink: 0 }} />}
-                            </div>
-                            <div style={{ color: textColor, fontSize: 24, fontWeight: 600, lineHeight: 1.4 }}>
-                                <div>13:00~</div>
-                                <div>17:00</div>
-                            </div>
+                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 15 : 30, position: 'relative', zIndex: 2, marginTop: 100 }}>
+                        <div style={{ width: isMobile ? '100%' : 150, display: 'flex', flexDirection: isMobile ? 'row' : 'column', alignItems: isMobile ? 'center' : 'flex-start', gap: isMobile ? 12 : 8, flexShrink: 0 }}>
+                            {isMobile ? (
+                                <>
+                                    <div style={{ fontSize: 24, fontWeight: 800, color: yellowColor }}>2일차</div>
+                                    <div style={{ color: textColor, fontSize: 16, fontWeight: 600 }}>13:00~17:00</div>
+                                    <div style={{ flex: 1, minWidth: 20, height: 1, backgroundColor: 'rgba(255,255,255,0.5)' }} />
+                                </>
+                            ) : (
+                                <>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 10, width: '100%' }}>
+                                        <div style={{ fontSize: 40, fontWeight: 800, color: yellowColor }}>2일차</div>
+                                        <div style={{ width: 9, height: 9, borderRadius: '50%', border: `11px solid ${yellowColor}`, backgroundColor: '#8BC34A', marginTop: 8, flexShrink: 0 }} />
+                                    </div>
+                                    <div style={{ color: textColor, fontSize: 24, fontWeight: 600, lineHeight: 1.4 }}>
+                                        <div>13:00~</div>
+                                        <div>17:00</div>
+                                    </div>
+                                </>
+                            )}
                         </div>
                         <div style={{ flex: 1, display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))', gap: isMobile ? 15 : 20 }}>
                             {/* ★ day2Artists 매핑 */}
