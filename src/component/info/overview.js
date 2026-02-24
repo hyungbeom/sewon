@@ -84,7 +84,7 @@ export default function Overview() {
 
                     {/* 2. 서브타이틀 및 구분선 */}
                     <div style={{
-                        fontSize: isMobile ? 28 : 32,
+                        fontSize: isMobile ? 20 : 32,
                         color: grayText,
                         fontWeight: 500,
                         marginBottom: isMobile ? 30 : 40,
