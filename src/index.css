@@ -38,7 +38,9 @@ code {
 
  /* 1. 컨텐츠가 스크롤바에 밀리지 않고, 스크롤바가 화면 위에 떠오르게(Overlay) 설정 */
  html {
-   overflow-y: overlay;
+   overflow-y: auto;
+     margin: 0;
+     padding: 0;
  }
 
  /* 2. 스크롤바 전체 영역과 배경(Track)을 완전히 투명하게 설정 */
