@@ -52,7 +52,6 @@ export default function Side() {
             infoLabel3: '부대행사장 내 체험존',
             cards: [
                 { title: '플로깅', desc: '1인당 플로깅키트 1개씩 지급\n플로깅 참여자에게 제주 특산품 제공', time: '30분', img: '/program/side8.png' },
-                { title: '친환경 향수 만들기', desc: '본인이 원하는 향을 선택해 친환경재료를 활용한 향수 만들기', time: '5분', img: '/program/side9.png' },
             ]
         },
         '체육대회': {

@@ -19,8 +19,7 @@ export default function Stage() {
 
     const day2Artists = [
         { name: '천록담', img: '/singer/singer5.png'  }, // 2일차 가수 1
-        { name: '나태주', img: '/singer/singer6.png' }, // 2일차 가수 2
-        { name: '박군', img: '/singer/singer7.png'  }, // 2일차 가수 3
+        { name: '태군 노래자랑', img: '/singer/singer6.png' }, // 2일차 가수 2
     ];
 
     return (
@@ -38,70 +37,61 @@ export default function Stage() {
             {/* 메인 이너 컨테이너 (밝은 네이비 박스) */}
             <div style={{
                 width: '100%',
-                maxWidth: 1000,
+                maxWidth: 1200,
                 backgroundColor: innerBgColor,
                 borderRadius: isMobile ? '16px' : '24px',
                 padding: isMobile ? '40px 20px' : '60px 80px',
                 boxSizing: 'border-box'
             }}>
 
-                {/* ==========================================
-                    1. 상단 타이틀 영역
-                ========================================== */}
-                <div style={{ textAlign: 'center', color: whiteText, marginBottom: isMobile ? 40 : 60 }}>
-                    <div style={{ fontSize: isMobile ? 14 : 32, fontWeight: 500, marginBottom: 10, opacity: 0.9 }}>
-                        제주도를 방문한 회원 및 가족, 관광객을 위한
-                    </div>
-                    <div style={{ fontSize: isMobile ? 32 : 38, fontWeight: 900, color: yellowColor, marginBottom: 15, letterSpacing: '-1px' }}>
-                        특별한 프로그램
-                    </div>
-                    <div style={{ fontSize: isMobile ? 14 : 16, opacity: 0.9 }}>
-                        회원과 관광객이 함께하는 <span style={{ fontWeight: 800, color: whiteText, opacity: 1 }}>수준 높은 환영의 밤</span> 진행!!
-                    </div>
-                </div>
 
                 {/* ==========================================
                     2. 타임라인 & 카드 영역 (PC/모바일 분기)
                 ========================================== */}
                 <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: isMobile ? 40 : 60 }}>
 
-                    {/* ★ PC 버전 전용: 좌측 세로선 (|) */}
+                    {/* ★ PC 버전 전용: 세로 타임라인 선 (노란 마커 중앙을 관통) */}
                     {!isMobile && (
                         <div style={{
                             position: 'absolute',
-                            left: 77, // 동그라미 한가운데를 관통하도록 수치 조정
+                            left: 77,
                             top: 15,
                             bottom: 50,
                             width: 2,
-                            backgroundColor: 'rgba(255,255,255,0.2)'
+                            backgroundColor: 'rgba(255,255,255,1)'
                         }} />
                     )}
 
                     {/* --- [1일차] --- */}
                     <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 20 : 40, position: 'relative' }}>
 
-                        {/* 1일차 라벨 (PC는 동그라미, 모바일은 가로선) */}
+                        {/* 1일차 라벨: 제목 + 노란 원형 마커 + 시간 (이미지 시안 타임라인) */}
                         <div style={{
                             width: isMobile ? '100%' : 90,
                             display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: isMobile ? 'flex-start' : 'space-between',
-                            gap: 15,
+                            flexDirection: 'column',
+                            alignItems: isMobile ? 'flex-start' : 'flex-start',
+                            gap: 8,
                             flexShrink: 0
                         }}>
-                            <span style={{ fontSize: 24, fontWeight: 900, color: yellowColor }}>1일차</span>
-                            {!isMobile ? (
-                                // PC: 노란색 테두리의 동그라미
-                                <div style={{ width: 14, height: 14, borderRadius: '50%', border: `3px solid ${yellowColor}`, backgroundColor: innerBgColor, zIndex: 1 }} />
-                            ) : (
-                                // 모바일: 가로선
-                                <div style={{ flex: 1, height: 1, backgroundColor: 'rgba(255,255,255,0.2)' }} />
-                            )}
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                                <span style={{ fontSize: 24, fontWeight: 900, color: yellowColor }}>1일차</span>
+                                {!isMobile ? (
+                                    <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: yellowColor, flexShrink: 0, zIndex: 1 }} />
+                                ) : (
+                                    <div style={{ flex: 1, height: 1, backgroundColor: 'rgba(255,255,255,0.2)' }} />
+                                )}
+                            </div>
+                            <>
+                                <div style={{ fontSize: 14, fontWeight: 400, color: whiteText }}>20:00~</div>
+                                <div style={{ fontSize: 14, fontWeight: 400, color: whiteText }}>22:00</div>
+                            </>
                         </div>
 
                         {/* 1일차 카드 그리드 */}
                         <div style={{
                             flex: 1,
+                            width: isMobile ? '100%' : 850,
                             display: 'grid',
                             // PC는 4칸, 모바일은 2칸 고정
                             gridTemplateColumns: isMobile ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))',
@@ -116,7 +106,7 @@ export default function Stage() {
                                         backgroundImage: `url(${artist.img})`,
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
-                                        backgroundColor: '#EAEAEA'
+
                                     }} />
                                     <div style={{ color: whiteText, fontSize: 16, fontWeight: 600 }}>{artist.name}</div>
                                 </div>
@@ -127,26 +117,33 @@ export default function Stage() {
                     {/* --- [2일차] --- */}
                     <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 20 : 40, position: 'relative' }}>
 
-                        {/* 2일차 라벨 */}
+                        {/* 2일차 라벨: 제목 + 노란 원형 마커 + 시간 (이미지 시안 타임라인) */}
                         <div style={{
                             width: isMobile ? '100%' : 90,
                             display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: isMobile ? 'flex-start' : 'space-between',
-                            gap: 15,
+                            flexDirection: 'column',
+                            alignItems: isMobile ? 'flex-start' : 'flex-start',
+                            gap: 8,
                             flexShrink: 0
                         }}>
-                            <span style={{ fontSize: 24, fontWeight: 900, color: yellowColor }}>2일차</span>
-                            {!isMobile ? (
-                                <div style={{ width: 14, height: 14, borderRadius: '50%', border: `3px solid ${yellowColor}`, backgroundColor: innerBgColor, zIndex: 1 }} />
-                            ) : (
-                                <div style={{ flex: 1, height: 1, backgroundColor: 'rgba(255,255,255,0.2)' }} />
-                            )}
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                                <span style={{ fontSize: 24, fontWeight: 900, color: yellowColor }}>2일차</span>
+                                {!isMobile ? (
+                                    <div style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: yellowColor, flexShrink: 0, zIndex: 1 }} />
+                                ) : (
+                                    <div style={{ flex: 1, height: 1, backgroundColor: 'rgba(255,255,255,0.2)' }} />
+                                )}
+                            </div>
+                            <>
+                                <div style={{ fontSize: 14, fontWeight: 400, color: whiteText }}>13:00~</div>
+                                <div style={{ fontSize: 14, fontWeight: 400, color: whiteText }}>17:00</div>
+                            </>
                         </div>
 
                         {/* 2일차 카드 그리드 */}
                         <div style={{
                             flex: 1,
+                            width: isMobile ? '100%' : 850,
                             display: 'grid',
                             // PC는 4칸, 모바일은 2칸 고정
                             gridTemplateColumns: isMobile ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))',
@@ -174,7 +171,7 @@ export default function Stage() {
                                             backgroundSize: 'cover',
                                             // 가로로 넓어질 때는 상단이 덜 잘리도록 포지션 조정
                                             backgroundPosition: isWideMobileCard ? 'center top' : 'center',
-                                            backgroundColor: '#EAEAEA'
+
                                         }} />
                                         <div style={{ color: whiteText, fontSize: 16, fontWeight: 600 }}>{artist.name}</div>
                                     </div>

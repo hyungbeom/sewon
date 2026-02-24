@@ -29,7 +29,7 @@ export default function Layouts() {
             '/program/stage': '무대 프로그램',
             '/program/side': '부대 프로그램',
             '/program/trekking': '트레킹 프로그램',
-            '/program/food': '먹거리 프로그램',
+            // '/program/food': '먹거리 프로그램',
 
             // 오시는 길
             '/location/map': '행사장 위치',

@@ -23,7 +23,7 @@ export default function Overview() {
             {/* 메인 컨테이너 (최대 너비 고정) */}
             <div style={{
                 width: '100%',
-                maxWidth: 1200,
+                maxWidth: 1500,
                 display: 'flex',
                 // ★ 핵심: 모바일은 세로(column), PC는 가로(row) 배치
                 flexDirection: isMobile ? 'column' : 'row',
@@ -35,7 +35,7 @@ export default function Overview() {
                     [왼쪽/상단] 포스터 이미지 영역
                 ========================================== */}
                 <div style={{
-                    width: isMobile ? '100%' : '42%', // PC에서는 전체 너비의 38% 차지 (오른쪽 텍스트 영역이 더 넓게)
+                    width: isMobile ? '100%' : '38%', // PC에서는 전체 너비의 38% 차지 (오른쪽 텍스트 영역이 더 넓게)
                     flexShrink: 0
                 }}>
                     <img
@@ -62,7 +62,7 @@ export default function Overview() {
 
                     {/* 1. 타이틀 (모바일/PC 줄바꿈 다르게 적용) */}
                     <div style={{
-                        fontSize: isMobile ? 32 : 40,
+                        fontSize: isMobile ? 32 : 44,
                         fontWeight: 900,
                         color: titleColor,
                         lineHeight: 1.2,

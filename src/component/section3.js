@@ -23,8 +23,8 @@ export default function Section3() {
 
     const day2Artists = [
         { name: '천록담', img: '/singer/singer5.png'  }, // 2일차 가수 1
-        { name: '나태주', img: '/singer/singer6.png' }, // 2일차 가수 2
-        { name: '박군', img: '/singer/singer7.png'  }, // 2일차 가수 3
+        { name: '태군 노래자랑', img: '/singer/singer6.png' }, // 2일차 가수 2
+
     ];
 
     return (
@@ -209,9 +209,15 @@ export default function Section3() {
 
                                         {/* --- 1일차 라인 --- */}
                                         <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 15 : 30, position: 'relative', zIndex: 2 }}>
-                                            <div style={{ width: isMobile ? 'auto' : '84px', display: 'flex', alignItems: 'flex-start', justifyContent: isMobile ? 'flex-start' : 'space-between', gap: 10, flexShrink: 0 }}>
-                                                <div style={{ fontSize: 22, fontWeight: 800, color: yellowColor }}>1일차</div>
-                                                {!isMobile && <div style={{ width: 14, height: 14, borderRadius: '50%', border: `3px solid ${yellowColor}`, backgroundColor: '#8BC34A', marginTop: 8 }} />}
+                                            <div style={{ width: isMobile ? 'auto' : 84, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8, flexShrink: 0 }}>
+                                                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: isMobile ? 'flex-start' : 'space-between', gap: 10, width: '100%' }}>
+                                                    <div style={{ fontSize: 22, fontWeight: 800, color: yellowColor }}>1일차</div>
+                                                    {!isMobile && <div style={{ width: 14, height: 14, borderRadius: '50%', border: `3px solid ${yellowColor}`, backgroundColor: '#8BC34A', marginTop: 8, flexShrink: 0 }} />}
+                                                </div>
+                                                <div style={{ color: textColor, fontSize: 21, fontWeight: 600, lineHeight: 1.4 }}>
+                                                    <div>20:00~</div>
+                                                    <div>22:00</div>
+                                                </div>
                                             </div>
                                             <div style={{ flex: 1, display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))', gap: isMobile ? 15 : 20 }}>
                                                 {/* ★ day1Artists 매핑 */}
@@ -224,10 +230,10 @@ export default function Section3() {
                                                             backgroundImage: `url(${artist.img})`, // 개별 이미지
                                                             backgroundSize: 'cover',
                                                             backgroundPosition: 'center',
-                                                            backgroundColor: '#e0e0e0', // 이미지가 없을 때 회색 배경
+
                                                             boxShadow: '0 8px 16px rgba(0,0,0,0.1)'
                                                         }} />
-                                                        <div style={{ color: textColor, fontSize: 32, fontWeight: 600 }}>{artist.name}</div>
+                                                        <div style={{ color: textColor, fontSize: 25, fontWeight: 400 }}>{artist.name}</div>
                                                     </div>
                                                 ))}
                                             </div>
@@ -235,9 +241,15 @@ export default function Section3() {
 
                                         {/* --- 2일차 라인 --- */}
                                         <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 15 : 30, position: 'relative', zIndex: 2 }}>
-                                            <div style={{ width: isMobile ? 'auto' : '84px', display: 'flex', alignItems: 'flex-start', justifyContent: isMobile ? 'flex-start' : 'space-between', gap: 10, flexShrink: 0 }}>
-                                                <div style={{ fontSize: 22, fontWeight: 800, color: yellowColor }}>2일차</div>
-                                                {!isMobile && <div style={{ width: 14, height: 14, borderRadius: '50%', border: `3px solid ${yellowColor}`, backgroundColor: '#8BC34A', marginTop: 8 }} />}
+                                            <div style={{ width: isMobile ? 'auto' : 84, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8, flexShrink: 0 }}>
+                                                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: isMobile ? 'flex-start' : 'space-between', gap: 10, width: '100%' }}>
+                                                    <div style={{ fontSize: 22, fontWeight: 800, color: yellowColor }}>2일차</div>
+                                                    {!isMobile && <div style={{ width: 14, height: 14, borderRadius: '50%', border: `3px solid ${yellowColor}`, backgroundColor: '#8BC34A', marginTop: 8, flexShrink: 0 }} />}
+                                                </div>
+                                                <div style={{ color: textColor, fontSize: 21, fontWeight: 600, lineHeight: 1.4 }}>
+                                                    <div>13:00~</div>
+                                                    <div>17:00</div>
+                                                </div>
                                             </div>
                                             <div style={{ flex: 1, display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))', gap: isMobile ? 15 : 20 }}>
                                                 {/* ★ day2Artists 매핑 */}
@@ -250,10 +262,10 @@ export default function Section3() {
                                                             backgroundImage: `url(${artist.img})`, // 개별 이미지
                                                             backgroundSize: 'cover',
                                                             backgroundPosition: 'center',
-                                                            backgroundColor: 'rgba(255,255,255,0.8)',
+
                                                             boxShadow: '0 8px 16px rgba(0,0,0,0.1)'
                                                         }} />
-                                                        <div style={{ color: textColor, fontSize: 32, fontWeight: 600 }}>{artist.name}</div>
+                                                        <div style={{ color: textColor, fontSize: 25, fontWeight: 400 }}>{artist.name}</div>
                                                     </div>
                                                 ))}
                                             </div>

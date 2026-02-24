@@ -9,12 +9,16 @@ export default function Tour() {
         {
             prefix: "제주",
             boldText: "관광지 안내",
-            imgSrc: "/info7.png" // 실제 이미지 경로
+            imgSrc: "/info7.png" ,
+            link : 'https://www.visitjeju.net/kr'
         },
         {
             prefix: "제주",
             boldText: "전통시장 안내",
-            imgSrc: "/info8.png" // 실제 이미지 경로
+            imgSrc: "/info8.png",
+
+            link : 'https://www.visitjeju.net/kr/detail/list?menuId=DOM_000001720000000000&cate1cd=cate0000000003#p1&pageSize=12&sortListType=likecnt&viewType=list&isShowBtag'
+
         }
     ];
 
@@ -54,6 +58,7 @@ export default function Tour() {
                             // 마우스 올렸을 때 살짝 떠오르는 애니메이션 효과 (선택사항)
                             transition: 'transform 0.2s ease',
                         }}
+                        onClick={(e) => window.open(item.link, '_blank')}
                         onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
                         onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
                     >

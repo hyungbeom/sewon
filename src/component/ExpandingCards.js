@@ -10,10 +10,10 @@ export default function ExpandingCards() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     const cards = [
-        { id: 0, title: "한국후계\n농업경영인이란?", bgImage: "/card1.png", path: "/info/about" },
-        { id: 1, title: "행사\n개요", bgImage: "/card2.png", path: "/info/overview" },
+        { id: 0, title: "한국후계\n농업경영인이란?", bgImage: "/pc/sub1.jpg", path: "/info/about" },
+        { id: 1, title: "행사\n개요", bgImage: "/card1.png", path: "/info/overview" },
         { id: 2, title: "행사\n일정\n안내", bgImage: "/card3.png", path: "/info/schedule" },
-        { id: 3, title: "지역\n관광\n안내", bgImage: "/pc/sub1.jpg", path: "/info/tour" },
+        { id: 3, title: "지역\n관광\n안내", bgImage: "/card2.png", path: "/info/tour" },
     ];
 
     return (

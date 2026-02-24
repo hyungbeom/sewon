@@ -22,11 +22,11 @@ export default function Notice() {
 
     // 게시글 가상 데이터
     const noticeData = [
-        { id: 10, title: '2025년 백제문화체험박물관 및 어린이백제체험관 가을행사 안내', date: '2026.02.06', content: SAMPLE_CONTENT },
-        { id: 9, title: '2025년 백제문화체험박물관 및 어린이백제체험관 가을행사 안내', date: '2026.02.06', content: SAMPLE_CONTENT },
-        { id: 8, title: '2025년 백제문화체험박물관 및 어린이백제체험관 가을행사 안내', date: '2026.02.06', content: SAMPLE_CONTENT },
-        { id: 7, title: '2025년 백제문화체험박물관 및 어린이백제체험관 가을행사 안내', date: '2026.02.06', content: SAMPLE_CONTENT },
-        { id: 6, title: '2025년 백제문화체험박물관 및 어린이백제체험관 가을행사 안내', date: '2026.02.06', content: SAMPLE_CONTENT },
+        // { id: 10, title: '2025년 백제문화체험박물관 및 어린이백제체험관 가을행사 안내', date: '2026.02.06', content: SAMPLE_CONTENT },
+        // { id: 9, title: '2025년 백제문화체험박물관 및 어린이백제체험관 가을행사 안내', date: '2026.02.06', content: SAMPLE_CONTENT },
+        // { id: 8, title: '2025년 백제문화체험박물관 및 어린이백제체험관 가을행사 안내', date: '2026.02.06', content: SAMPLE_CONTENT },
+        // { id: 7, title: '2025년 백제문화체험박물관 및 어린이백제체험관 가을행사 안내', date: '2026.02.06', content: SAMPLE_CONTENT },
+        // { id: 6, title: '2025년 백제문화체험박물관 및 어린이백제체험관 가을행사 안내', date: '2026.02.06', content: SAMPLE_CONTENT },
     ];
 
     // 공통 페이지 버튼 컴포넌트

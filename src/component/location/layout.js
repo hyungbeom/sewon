@@ -24,7 +24,7 @@ export default function Layout() {
             ========================================== */}
             <div style={{
                 width: '100%',
-                maxWidth: 1000,
+                maxWidth: 1200,
                 backgroundColor: '#FFFFFF',
                 borderRadius: isMobile ? '24px' : '32px', // 둥근 모서리
                 padding: isMobile ? '30px 20px' : '60px 80px',
@@ -54,6 +54,27 @@ export default function Layout() {
                             borderRadius: '16px' // 이미지가 딱딱해 보이지 않게 모서리 라운드 처리
                         }}
                     />
+                    {/* 행사장 주소 카드 - 지도보다 좁게, 중앙 정렬 */}
+                    <div style={{
+                        marginTop: 50,
+                        marginLeft: 'auto',
+                        marginRight: 'auto',
+                        width: '100%',
+                        maxWidth: isMobile ? 360 : 560,
+                        boxSizing: 'border-box',
+                        padding: isMobile ? '12px 16px' : '14px 24px',
+                        backgroundColor: '#34786A',
+                        borderRadius: '12px',
+                        textAlign: 'center',
+                        color: '#FFFFFF'
+                    }}>
+                        <div style={{ fontSize: isMobile ? 18 : 20, fontWeight: 600, marginBottom: 4 }}>
+                            제주특별자치도 제주시 새별오름 일원
+                        </div>
+                        <div style={{ fontSize: isMobile ? 14 : 15, fontWeight: 400 }}>
+                            제주 제주시 애월읍 봉성리 산59-8
+                        </div>
+                    </div>
                 </div>
 
 

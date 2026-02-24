@@ -23,7 +23,7 @@ export default function Header({back = true}) {
                 { name: '무대 프로그램', path: '/program/stage' },
                 { name: '부대 프로그램', path: '/program/side' },
                 { name: '트레킹 프로그램', path: '/program/trekking' },
-                { name: '먹거리 프로그램', path: '/program/food' }
+                // { name: '먹거리 프로그램', path: '/program/food' }
             ]
         },
         {
