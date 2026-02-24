@@ -137,7 +137,7 @@ export default function Layouts() {
                         opacity: 0.5,
                         marginBottom: 15
                     }}/>
-                    <div style={{fontSize: isMobile ? 24 : 60, color: primaryColor, fontWeight: 300}}>
+                    <div style={{fontSize: isMobile ? 24 : 60, color: primaryColor, fontWeight: 400}}>
                         {/* ★ 3. 고정된 텍스트 대신 변수(pageTitle)를 넣어줍니다! */}
                         {pageTitle}
                     </div>

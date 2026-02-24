@@ -26,14 +26,14 @@ export default function About() {
             flexDirection: 'column',
             alignItems: 'center',
             // padding: isMobile ? '0 20px 80px' : '0 20px 150px',
-            fontFamily: "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
+
             letterSpacing: '-0.5px'
         }}>
 
 
 
             {/* 메인 콘텐츠 컨테이너 (최대 너비 1200px) */}
-            <div style={{ width: '100%', maxWidth: 1200 }}>
+            <div style={{ width: '100%', maxWidth: 1520 }}>
 
                 {/* 2. 히어로 배너 이미지 영역 */}
                 <div style={{
@@ -43,13 +43,13 @@ export default function About() {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     borderRadius: isMobile ? 16 : 24,
-                    padding: isMobile ? '120px 20px 30px' : '200px 60px 50px', // 아래쪽에 글씨가 오도록 패딩 조절
+                    padding: isMobile ? '120px 20px 30px' : '200px 50px 50px', // 아래쪽에 글씨가 오도록 패딩 조절
                     color: 'white',
                     marginBottom: isMobile ? 40 : 80,
                     boxSizing: 'border-box'
                 }}>
                     {/* 모바일일 때 글씨 줄바꿈 시안 반영 */}
-                    <div style={{ fontSize: isMobile ? 28 : 50, fontWeight: 800, marginBottom: 15, lineHeight: 1.3 }}>
+                    <div style={{ fontSize: isMobile ? 28 : 50, fontWeight: 500, marginBottom: 15, lineHeight: 1.3 }}>
                         한국후계농업경영인<br style={{ display: isMobile ? 'block' : 'none' }}/>이란?
                     </div>
                     <div style={{ fontSize: isMobile ? 14 : 24, fontWeight: 400, opacity: 0.9, lineHeight: 1.6, wordBreak: 'keep-all' }}>
@@ -172,9 +172,11 @@ export default function About() {
                             flex: 1,
                             minHeight: 0,
                             boxSizing: 'border-box',
-                            display: 'flex', alignItems: 'center' // 텍스트 중앙 정렬
+                            display: 'flex', // 텍스트 중앙 정렬,
+
+                            fontWeight : 900
                         }}>
-                            <div style={{ fontSize: isMobile ? 15 : 16, fontWeight: 800, color: darkText, lineHeight: 1.6, wordBreak: 'keep-all', zIndex: 1 }}>
+                            <div style={{ fontSize: isMobile ? 15 : 16,  color: darkText, lineHeight: 1.6, wordBreak: 'keep-all', zIndex: 1 }}>
                                 한국농촌지도자중앙연합회 등과 함께 한국 농업계를 대표하는 단체로서, 정부의 농정 파트너이자 농업 현장의 목소리를 가장 강력하게 전달하는 스피커 역할을 하고 있습니다.
                             </div>
                             <div style={{ position: 'absolute', right: 20, bottom: -10, opacity: 0.05, fontSize: 100, zIndex: 0 }}>🌍</div>

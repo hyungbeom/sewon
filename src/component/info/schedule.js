@@ -27,7 +27,6 @@ export default function Schedule() {
             width: '100%',
             padding: '20px 20px 80px', // 좌우 여백 및 하단 여백 확보
             boxSizing: 'border-box',
-            fontFamily: "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
             letterSpacing: '-0.5px'
         }}>
 

@@ -16,7 +16,7 @@ export default function Overview() {
             justifyContent: 'center',
             // 모바일과 PC의 상하 패딩 여백 차등 적용
             padding: isMobile ? '50px 0px 80px' : '100px 0px 0px',
-            fontFamily: "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
+
             letterSpacing: '-0.5px'
         }}>
 
@@ -28,7 +28,7 @@ export default function Overview() {
                 // ★ 핵심: 모바일은 세로(column), PC는 가로(row) 배치
                 flexDirection: isMobile ? 'column' : 'row',
                 alignItems: isMobile ? 'center' : 'flex-start',
-                gap: isMobile ? 40 : 60
+                gap: isMobile ? 40 : 120
             }}>
 
                 {/* ==========================================
@@ -99,20 +99,20 @@ export default function Overview() {
 
                         {/* 3-1. 행사기간 */}
                         <div style={{ display: 'flex', gap: 20 }}>
-                            <div style={{ width: 70, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0 }}>행사기간</div>
+                            <div style={{ width: 100, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0, paddingTop : 8 }}>행사기간</div>
                             <div style={{ fontSize: 20, color: grayText }}>2026.03.31(화) ~ 04.02.(목)</div>
                         </div>
 
                         {/* 3-2. 장소 */}
                         <div style={{ display: 'flex', gap: 20 }}>
-                            <div style={{ width: 70, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0 }}>장소</div>
+                            <div style={{ width: 100, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0 , paddingTop : 8}}>장소</div>
                             <div style={{ fontSize: 20, color: grayText }}>제주특별자치도 제주시 새별오름 일원</div>
                         </div>
 
                         {/* 3-3. 목적 (문단 분리) */}
                         <div style={{ display: 'flex', gap: 20 }}>
-                            <div style={{ width: 70, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0, paddingTop: 2 }}>목적</div>
-                            <div style={{ flex: 1, fontSize: 20, color: grayText, lineHeight: 1.6, wordBreak: 'keep-all' }}>
+                            <div style={{ width: 100, fontSize: 20, fontWeight: 800, color: darkText, flexShrink: 0, paddingTop : 8 }}>목적</div>
+                            <div style={{ flex: 1, fontSize: 20, color: grayText,  wordBreak: 'keep-all' }}>
                                 <div style={{ marginBottom: 12, fontSize: 20 }}>
                                     한국후계농업경영인 회원 및 가족들의 결속과 단합으로 농업농촌 발전 주도
                                 </div>

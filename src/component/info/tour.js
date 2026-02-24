@@ -28,7 +28,6 @@ export default function Tour() {
             display: 'flex',
             justifyContent: 'center',
 
-            fontFamily: "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
             letterSpacing: '-0.5px'
         }}>
 

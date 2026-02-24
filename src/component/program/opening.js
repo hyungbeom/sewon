@@ -21,9 +21,9 @@ export default function Opening() {
 
     // 카드 데이터 (실제 이미지 경로로 수정해 주세요)
     const cardData = [
-        { title: '난타', img: '/info9.png' },
-        { title: '제주 농요', img: '/info10.png' },
-        { title: '팝페라', img: '/info11.png' }
+        { title: '제주 농요', img: '/info9.png' },
+        { title: '개막식', img: '/info10.png' },
+        { title: '레이저쇼', img: '/info11.png' }
     ];
 
     return (
@@ -33,14 +33,14 @@ export default function Opening() {
             flexDirection: 'column',
             alignItems: 'center',
             padding: isMobile ? '40px 0px 80px' : '80px 20px 120px',
-            fontFamily: "'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif",
+
             letterSpacing: '-0.5px'
         }}>
 
             {/* ★ 핵심 수정: PC는 전체를 회색으로 감싸고, 모바일은 투명하게 풀어줍니다. */}
             <div style={{
                 width: '100%',
-                maxWidth: 1000,
+                maxWidth: 1200,
                 backgroundColor: isMobile ? 'transparent' : grayBg, // PC일 때만 전체 회색 배경
                 borderRadius: isMobile ? 0 : '24px',
                 padding: isMobile ? 0 : '60px 80px',
@@ -89,11 +89,11 @@ export default function Opening() {
                                     alignItems: isColumnMobile ? 'flex-start' : 'flex-start'
                                 }}>
                                     <div style={{
-                                        width: isColumnMobile ? '100%' : 75,
+                                        width: isColumnMobile ? '100%' : 100,
                                         fontWeight: 800,
                                         color: darkText,
                                         flexShrink: 0,
-                                        fontSize: isMobile ? 15 : 16
+                                        fontSize: isMobile ? 15 : 20
                                     }}>
                                         {item.label}
                                     </div>
@@ -102,7 +102,7 @@ export default function Opening() {
                                         color: grayText,
                                         lineHeight: 1.6,
                                         fontWeight: 500,
-                                        fontSize: isMobile ? 14 : 16,
+                                        fontSize: isMobile ? 14 : 20,
                                         whiteSpace: 'pre-line', // 배열에 넣은 \n 줄바꿈이 화면에 적용되도록 하는 마법의 속성
                                         wordBreak: 'keep-all'
                                     }}>
@@ -122,9 +122,9 @@ export default function Opening() {
                         fontSize: isMobile ? 22 : 26,
                         fontWeight: 800,
                         color: titleColor,
-                        marginBottom: isMobile ? 20 : 30
+                        marginBottom: isMobile ? 20 : 32
                     }}>
-                        식전 공연 안내
+                        개막식 프로그램 안내
                     </div>
 
                     {/* 카드 그리드 */}
