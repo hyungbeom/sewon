@@ -37,7 +37,7 @@ export default function Stage() {
             {/* 메인 이너 컨테이너 (밝은 네이비 박스) */}
             <div style={{
                 width: '100%',
-                maxWidth: 1200,
+                maxWidth: 1400,
                 backgroundColor: innerBgColor,
                 borderRadius: isMobile ? '16px' : '24px',
                 padding: isMobile ? '40px 20px' : '60px 80px',

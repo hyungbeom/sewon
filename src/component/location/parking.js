@@ -26,7 +26,7 @@ export default function Parking() {
             ========================================== */}
             <div style={{
                 width: '100%',
-                maxWidth: 1200,
+                maxWidth: 1400,
                 backgroundColor: '#FFFFFF',
                 borderRadius: isMobile ? '24px' : '32px',
                 padding: isMobile ? '30px 20px 40px' : '50px 60px 60px',

@@ -29,65 +29,71 @@ export default function Footer({color='ffffff'}) {
                 >
                     <div style={{
                         width: "100%",
-                        maxWidth: 1200,
+                        maxWidth: 1400,
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
                         gap: 30,
-                        position: "relative",
                     }}>
-                        {/* PC 알약 내비게이션 */}
+                        {/* PC: 알약 내비게이션 + 맨위로 버튼 한 줄 배치 */}
                         <div style={{
-                            backgroundColor: "white",
-                            borderRadius: 50,
-                            padding: "20px 60px",
                             display: "flex",
-                            flexWrap: "wrap",
+                            flexDirection: "row",
+                            alignItems: "center",
                             justifyContent: "center",
-                            gap: 30,
-                            fontSize: 16,
-                            fontWeight: 500,
-                            color: "#555",
-                            boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+                            gap: 24,
+                            flexWrap: "wrap",
                         }}>
-                            <div style={{ fontWeight: 700, color: "#333", cursor: "pointer" }}>개인정보처리방침</div>
-                            <div>·</div>
-                            <div style={{ cursor: "pointer" }}>사이트맵</div>
-                            <div>·</div>
-                            <div style={{ cursor: "pointer" }}>오시는길</div>
-                            <div>·</div>
-                            <div style={{ cursor: "pointer" }}>이용약관</div>
+                            <div style={{
+                                backgroundColor: "white",
+                                borderRadius: 50,
+                                padding: "20px 60px",
+                                display: "flex",
+                                flexWrap: "wrap",
+                                justifyContent: "center",
+                                gap: 30,
+                                fontSize: 16,
+                                fontWeight: 500,
+                                color: "#555",
+                                boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+                            }}>
+                                <div style={{ fontWeight: 700, color: "#333", cursor: "pointer" }}>개인정보처리방침</div>
+                                <div>·</div>
+                                <div style={{ cursor: "pointer" }}>사이트맵</div>
+                                <div>·</div>
+                                <div style={{ cursor: "pointer" }}>오시는길</div>
+                                <div>·</div>
+                                <div style={{ cursor: "pointer" }}>이용약관</div>
+                            </div>
+
+                            <div
+                                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                                style={{
+                                    backgroundColor: "#222",
+                                    color: "white",
+                                    width: 60,
+                                    height: 60,
+                                    borderRadius: 16,
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    fontSize: 12,
+                                    cursor: "pointer",
+                                    flexShrink: 0,
+                                }}
+                            >
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: 4 }}>
+                                    <line x1="12" y1="19" x2="12" y2="5"></line>
+                                    <polyline points="5 12 12 5 19 12"></polyline>
+                                </svg>
+                                맨위로
+                            </div>
                         </div>
 
                         <div style={{ textAlign: "center", color: "white", fontSize: 14, lineHeight: 1.6, opacity: 0.9 }}>
                             <div>(630) 제주특별자치도 제주시 새별오름 일원 | 전화 064 . 987 . 6543</div>
                             <div>Copyright © 2026 Korea Advanced Farmers Federation. All Rights Reserved</div>
-                        </div>
-
-                        <div
-                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                            style={{
-                                position: "absolute",
-                                left: 921,
-                                top: -2,
-                                backgroundColor: "#222",
-                                color: "white",
-                                width: 60,
-                                height: 60,
-                                borderRadius: 16,
-                                display: "flex",
-                                flexDirection: "column",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                fontSize: 12,
-                                cursor: "pointer",
-                            }}
-                        >
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: 4 }}>
-                                <line x1="12" y1="19" x2="12" y2="5"></line>
-                                <polyline points="5 12 12 5 19 12"></polyline>
-                            </svg>
-                            맨위로
                         </div>
                     </div>
                 </div>

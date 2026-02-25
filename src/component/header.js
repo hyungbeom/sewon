@@ -97,7 +97,7 @@ export default function Header({back = true}) {
 
                     <div
                         style={{
-                            flex: 1,
+                            flex: 2,
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',

@@ -49,7 +49,7 @@ export default function Section3() {
                 <div style={{
                     width: '100%',
 
-                    maxWidth: 1500,
+                    maxWidth: 1200,
                     display: 'flex',
                     flexDirection: isMobile ? 'column' : 'row',
                     gap: isMobile ? 50 : 32,

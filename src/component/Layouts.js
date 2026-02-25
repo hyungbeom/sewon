@@ -86,7 +86,7 @@ export default function Layouts() {
     }, [location.pathname]);
 
     return (
-        <div style={{minWidth : isMobile ? null : 1200}}>
+        <div style={{minWidth : isMobile ? null : 1400}}>
             {location.pathname === "/" ? (
                 <div style={{
                     paddingTop: 125,
@@ -146,7 +146,7 @@ export default function Layouts() {
 
             <main
 
-                style={{minWidth : isMobile ? null : 1200, padding: location.pathname === "/" ? 0 : isMobile ? ('0px 16px 100px 16px') : ('0px 0px')}}>
+                style={{minWidth : isMobile ? null : 1400, padding: location.pathname === "/" ? 0 : isMobile ? ('0px 16px 100px 16px') : ('0px 0px')}}>
                 <Outlet/>
             </main>
 

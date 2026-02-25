@@ -24,7 +24,7 @@ export default function Layout() {
             ========================================== */}
             <div style={{
                 width: '100%',
-                maxWidth: 1200,
+                maxWidth: 1400,
                 backgroundColor: '#FFFFFF',
                 borderRadius: isMobile ? '24px' : '32px', // 둥근 모서리
                 padding: isMobile ? '30px 20px' : '60px 80px',

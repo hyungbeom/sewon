@@ -14,7 +14,7 @@ export default function Schedule() {
     if (!isMobile) {
         return (
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <img src="/info3.png" style={{ width: '100%', maxWidth: 1200, display: 'block' }} alt="행사 일정 안내" />
+                <img src="/info3.png" style={{ width: '100%', maxWidth: 1400, display: 'block' }} alt="행사 일정 안내" />
             </div>
         );
     }
