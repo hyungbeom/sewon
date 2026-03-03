@@ -46,7 +46,7 @@ export default function Qna() {
                 >
                     <div
                         style={{
-                            fontSize: isMobile ? 14 : 15,
+                            fontSize: isMobile ? 14 : 25,
                             fontWeight: 400,
                             color: "#333333",
                         }}
@@ -55,7 +55,8 @@ export default function Qna() {
                     </div>
                     <div
                         style={{
-                            fontSize: isMobile ? 18 : 20,
+                            paddingTop : 5,
+                            fontSize: isMobile ? 18 : 28,
                             fontWeight: 700,
                             color: "#333333",
                         }}
@@ -64,7 +65,7 @@ export default function Qna() {
                     </div>
                     <div
                         style={{
-                            fontSize: isMobile ? 14 : 15,
+                            fontSize: isMobile ? 14 : 25,
                             fontWeight: 400,
                             color: "#333333",
                         }}

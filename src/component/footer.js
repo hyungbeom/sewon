@@ -1,4 +1,5 @@
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 export default function Footer({color='ffffff'}) {
     console.log(color,'????')
@@ -57,13 +58,13 @@ export default function Footer({color='ffffff'}) {
                                 color: "#555",
                                 boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
                             }}>
-                                <div style={{ fontWeight: 700, color: "#333", cursor: "pointer" }}>개인정보처리방침</div>
+                                <Link to="/info/about" style={{ fontWeight: 700, color: "#333", cursor: "pointer", textDecoration: "none" }}>행사안내</Link>
                                 <div>·</div>
-                                <div style={{ cursor: "pointer" }}>사이트맵</div>
+                                <Link to="/program/opening" style={{ cursor: "pointer", textDecoration: "none", color: "inherit" }}>프로그램 안내</Link>
                                 <div>·</div>
-                                <div style={{ cursor: "pointer" }}>오시는길</div>
+                                <Link to="/location/map" style={{ cursor: "pointer", textDecoration: "none", color: "inherit" }}>오시는길</Link>
                                 <div>·</div>
-                                <div style={{ cursor: "pointer" }}>이용약관</div>
+                                <Link to="/board/notice" style={{ cursor: "pointer", textDecoration: "none", color: "inherit" }}>게시판</Link>
                             </div>
 
                             <div
@@ -128,18 +129,18 @@ export default function Footer({color='ffffff'}) {
                         gap: 8
                     }}>
                         {/* 글씨 크기를 14 -> 13으로 미세조정하여 한 줄에 쏙 들어가게 세팅 */}
-                        <div style={{ color: '#111111', fontSize: 13, fontWeight: 800, cursor: 'pointer', whiteSpace: 'nowrap' }}>
-                            개인정보처리방침
-                        </div>
-                        <div style={{ color: '#888888', fontSize: 13, fontWeight: 500, cursor: 'pointer', whiteSpace: 'nowrap' }}>
-                            사이트맵
-                        </div>
-                        <div style={{ color: '#888888', fontSize: 13, fontWeight: 500, cursor: 'pointer', whiteSpace: 'nowrap' }}>
+                        <Link to="/info/about" style={{ color: '#111111', fontSize: 13, fontWeight: 800, cursor: 'pointer', whiteSpace: 'nowrap', textDecoration: 'none' }}>
+                            행사안내
+                        </Link>
+                        <Link to="/program/opening" style={{ color: '#888888', fontSize: 13, fontWeight: 500, cursor: 'pointer', whiteSpace: 'nowrap', textDecoration: 'none' }}>
+                            프로그램 안내
+                        </Link>
+                        <Link to="/location/map" style={{ color: '#888888', fontSize: 13, fontWeight: 500, cursor: 'pointer', whiteSpace: 'nowrap', textDecoration: 'none' }}>
                             오시는길
-                        </div>
-                        <div style={{ color: '#888888', fontSize: 13, fontWeight: 500, cursor: 'pointer', whiteSpace: 'nowrap' }}>
-                            이용약관
-                        </div>
+                        </Link>
+                        <Link to="/board/notice" style={{ color: '#888888', fontSize: 13, fontWeight: 500, cursor: 'pointer', whiteSpace: 'nowrap', textDecoration: 'none' }}>
+                            게시판
+                        </Link>
                     </nav>
 
                     {/* 2. 하단 텍스트 정보 영역 */}
