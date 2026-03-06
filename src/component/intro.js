@@ -8,6 +8,9 @@ export default function Intro() {
 
     return (
         <>
+            <h1 style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(1px, 1px, 1px, 1px)' }}>
+                한국후계 농업경영인 전국대회
+            </h1>
             <Section1/>
             <Section2/>
             <Section3/>
