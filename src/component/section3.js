@@ -32,7 +32,7 @@ export default function Section3() {
         <div >
             {/* 상단 물결 이미지 */}
             {!isMobile && <div style={{ backgroundColor: '#EAEC71' }}>
-                <img src="/pc/step1.png" width={'100%'} alt="" style={{ display: 'block' }} />
+                <img src="/pc/step1.png" width={'100%'} alt="한국후계 농업경영인" style={{ display: 'block' }} />
             </div>}
 
             {/* 메인 그라데이션 영역 */}
@@ -289,7 +289,7 @@ export default function Section3() {
             </div>
 
             {/* 하단 물결 이미지 */}
-            {!isMobile && <img src="/pc/step2.png" width={'100%'} alt="" style={{ display: 'block', marginTop: -5 }} />}
+            {!isMobile && <img src="/pc/step2.png" width={'100%'} alt="한국후계 농업경영인" style={{ display: 'block', marginTop: -5 }} />}
 
             {/* 애니메이션 및 스크롤바 숨김 CSS */}
             <style>{`

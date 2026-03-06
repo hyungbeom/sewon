@@ -103,7 +103,7 @@ export default function Layouts() {
                     <img
                         src={isMobile ? '/mo/main.png' : '/pc/main.png'}
                         width={isMobile ? '90%' : '65%'}
-                        alt=""
+                        alt="한국후계 농업경영인"
                     />
                 </div>
             ) : (
@@ -120,7 +120,7 @@ export default function Layouts() {
                     justifyContent: 'center'
                 }}>
                     <img src={isMobile ? "/mo/subTitle.png" : "/pc/subTitle.png"} width={isMobile ? 250 : 700}
-                         style={{paddingTop: isMobile ? 30 : 20}} alt=""/>
+                         style={{paddingTop: isMobile ? 30 : 20}} alt="한국후계 농업경영인"/>
                 </div>
 
                 {/* 상단 타이틀 영역 */}

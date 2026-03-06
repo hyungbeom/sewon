@@ -91,7 +91,7 @@ export default function Header({back = true}) {
                 }}>
                     <div style={{ flex: 1, textAlign: 'left', paddingLeft: 40 }}>
                         <Link to="/" onClick={() => setIsMenuOpen(false)}>
-                            <img src="/left_logo.svg" width={250} alt=""/>
+                            <img src="/left_logo.svg" width={250} alt="한국후계 농업경영인"/>
                         </Link>
                     </div>
 
@@ -136,7 +136,7 @@ export default function Header({back = true}) {
                     </div>
 
                     <div style={{ flex: 1, textAlign: 'right', paddingRight: 40 }}>
-                        <img src="/right_logo.svg" alt=""/>
+                        <img src="/right_logo.svg" alt="한국후계 농업경영인"/>
                     </div>
                 </div>
 

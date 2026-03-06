@@ -10,7 +10,7 @@ export default function Section1() {
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
                 <div style={{fontSize:isMobile ? 32 : 60, fontFamily: "'GmarketSans', sans-serif", fontWeight: 500, lineHeight : 1.3 }}>다함께 미래로!  {isMobile ? <br/> : <></>} <span style={{fontWeight: 700}}>빛나는 한농연</span>
                 </div>
-                <img src="/mark.svg" alt="" style={{marginRight:isMobile ? 0 : -50, marginTop: isMobile? 0 : -100}} width={isMobile ? 83 : 'auto'} />
+                <img src="/mark.svg" alt="한국후계 농업경영인" style={{marginRight:isMobile ? 0 : -50, marginTop: isMobile? 0 : -100}} width={isMobile ? 83 : 'auto'} />
             </div>
 
             <div style={{ width: 60, height: 2, background: '#F39800', marginTop: 30, marginBottom: isMobile ? 40 :  73 }} />
